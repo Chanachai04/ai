@@ -7,8 +7,9 @@ model_name = "Thaweewat/wangchanberta-hyperopt-sentiment-01"
 tokenizer_name = "airesearch/wangchanberta-base-att-spm-uncased"
 
 # โหลด tokenizer แบบ slow
-tokenizer = AutoTokenizer.from_pretrained(tokenizer_name, use_fast=False)
 model = AutoModelForSequenceClassification.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(tokenizer_name, use_fast=False)
+print("Model and tokenizer loaded successfully")
 
 sentiment_pipeline = pipeline(
     "text-classification",
