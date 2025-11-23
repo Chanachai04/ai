@@ -6,6 +6,8 @@
   <li>pip install --upgrade torch --index-url https://download.pytorch.org/whl/cpu</li>
 </ul>
 <hr>
+<h1>Python version 3.11.0</h1>
+<hr>
 <h1>รันโค้ด</h1>
 <p>uvicorn ai:app --host 0.0.0.0 --port 5000</p>
 <hr>
