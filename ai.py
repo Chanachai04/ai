@@ -27,6 +27,20 @@ app = FastAPI(title="Thai Sentiment API")
 class TextRequest(BaseModel):
     text: str
 
+@app.get("/")
+async def root():
+    return {
+        "message": "Thai Sentiment Analysis API",
+        "status": "running",
+        "endpoints": {
+            "POST /sentiment": "Analyze sentiment of Thai text"
+        }
+    }
+
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy"}
+
 @app.post("/sentiment")
 async def analyze_sentiment(request: TextRequest):
     if not request.text.strip():
