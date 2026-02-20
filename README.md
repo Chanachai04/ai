@@ -18,7 +18,7 @@
 <h1>รันโค้ด</h1>
 
 ```powershall
-uvicorn ai:app --host 0.0.0.0 --port 8000
+uvicorn ai:app --host 0.0.0.0 --port 5000
 ```
 <hr>
 <h1>DB ใช้ xampp</h1>
